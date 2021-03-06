@@ -32,13 +32,15 @@
 /* Default option : bit0 => no signature */
 #define HEADER_DEFAULT_OPTION	(__cpu_to_le32(0x00000001))
 
-typedef unsigned int uint32_t;
-typedef unsigned char uint8_t;
 
 #if defined   (__GNUC__)        /* GNU Compiler */
+	#include <stdint.h>
 	#define ATTRPACKED __attribute__ ((packed))
 #else
 	#define ATTRPACKED
+typedef unsigned int uint32_t;
+typedef unsigned char uint8_t;
+
 #endif /* __GNUC__ */
 
 struct stm32_header {
@@ -57,7 +59,7 @@ struct stm32_header {
 	uint8_t ecdsa_public_key [64]; //64
 	uint8_t padding[83] ; //83
 	uint8_t binary_type; //1
-} ;
+} ATTRPACKED;
 
 static struct stm32_header stm32image_header;
 
