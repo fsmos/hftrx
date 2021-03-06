@@ -36,21 +36,21 @@ typedef unsigned long uint32_t;
 typedef unsigned char uint8_t;
 
 struct stm32_header {
-	uint32_t magic_number;
-	uint8_t image_signature[64];
-	uint32_t image_checksum;
-	uint8_t  header_version[4];
-	uint32_t image_length;
-	uint32_t image_entry_point;
-	uint32_t reserved1;
-	uint32_t load_address;
-	uint32_t reserved2;
-	uint32_t version_number;
-	uint32_t option_flags;
-	uint32_t ecdsa_algorithm;
-	uint8_t ecdsa_public_key[64];
-	uint8_t padding[83];
-	uint8_t binary_type;
+  uint32_t magic_number;
+  uint8_t image_signature[64];
+  uint32_t image_checksum;
+  uint8_t  header_version[4];
+  uint32_t image_length;
+  uint32_t image_entry_point;
+  uint32_t reserved1;
+  uint32_t load_address;
+  uint32_t reserved2;
+  uint32_t version_number;
+  uint32_t option_flags;
+  uint32_t ecdsa_algorithm;
+  uint8_t ecdsa_public_key[64];
+  uint8_t padding[83];
+  uint8_t binary_type;
 };
 
 static struct stm32_header stm32image_header;
