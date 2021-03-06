@@ -17,6 +17,7 @@
 # Start of default section
 #
 TRGT = arm-none-eabi-
+TRGT = ../../../gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-
 #TRGT = C:\user\klen\bin\arm-kgp-eabi-
 
 #
