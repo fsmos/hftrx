@@ -51,7 +51,7 @@ struct stm32_header {
   uint8_t ecdsa_public_key[64];
   uint8_t padding[83];
   uint8_t binary_type;
-};
+} __attribute__((packed)) ;
 
 static struct stm32_header stm32image_header;
 
