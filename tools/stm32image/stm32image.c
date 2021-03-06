@@ -43,9 +43,9 @@ typedef unsigned char uint8_t;
 
 struct stm32_header {
 	uint32_t magic_number; //4
-	uint8_t image_signature [64] ATTRPACKED; //64
+	uint8_t image_signature [64]; //64
 	uint32_t image_checksum; //4
-	uint8_t  header_version [4] ATTRPACKED; //4
+	uint8_t  header_version [4]; //4
 	uint32_t image_length; //4
 	uint32_t image_entry_point; //4
 	uint32_t reserved1; //4
@@ -54,10 +54,10 @@ struct stm32_header {
 	uint32_t version_number; //4
 	uint32_t option_flags; //4
 	uint32_t ecdsa_algorithm ; //4
-	uint8_t ecdsa_public_key [64] ATTRPACKED; //64
+	uint8_t ecdsa_public_key [64]; //64
 	uint8_t padding[83] ; //83
 	uint8_t binary_type; //1
-} ATTRPACKED;
+} ;
 
 static struct stm32_header stm32image_header;
 
